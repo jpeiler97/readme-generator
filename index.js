@@ -66,11 +66,41 @@ inquirer.prompt([
     }
     ])
 .then((data) => {
-    const tableOfContents = '[Installation](#Installation)\n[Usage](#Usage)\n[License](#License)\n[Contributing](#Contributing)\n[Tests](#Tests)\n[Questions](#Questions)';
-    const newText = `#${data.title}\n\n##Description\n${data.description}\n\n##Table of Contents\n${tableOfContents}\n\n##Installation\n${data.installation}\n\n##Usage\n${data.usage}\n\n
-    ##Contributing\n${data.contributing}\n\n##Tests\n${data.tests}\n\n##Questions\nFor further questions, you may reach me at:\n- GitHub: ${data.githubUsername}\n- EMail: ${data.email}`;
+    const tableOfContents = 
+    `[Installation](#Installation)
+    [Usage](#Usage)
+    [License](#License)
+    [Contributing](#Contributing)
+    [Tests](#Tests)
+    [Questions](#Questions)`;
+    const newText = 
+    `
+    #${data.title}
     
-    console.log(newText);
-    // fs.writeFile('log.txt', newText, (err) => 
-    // err ? console.log(err) : console.log('Success!'));
+    ##Description
+    ${data.description}
+
+    ##Table of Contents
+    ${tableOfContents}
+    
+    ##Installation
+    ${data.installation}
+    
+    ##Usage
+    ${data.usage}
+
+    ##Contributing
+    ${data.contributing}
+    
+    ##Tests
+    ${data.tests}
+
+    ##Questions
+    For further questions, you may reach me at:
+    - GitHub: ${data.githubUsername}
+    - EMail: ${data.email}`;
+    
+    // console.log(newText);
+    fs.writeFile('log.txt', newText, (err) => 
+    err ? console.log(err) : console.log('Success!'));
 })
