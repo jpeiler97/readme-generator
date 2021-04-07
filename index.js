@@ -133,7 +133,7 @@ ${data.tests}
 <a name="questions"></a>
 ## Questions
 For further questions, you may reach me at:
-- GitHub: ${data.githubUsername}
+- GitHub:[${data.githubUsername}](https://github.com/${data.githubUsername})
 - Email: ${data.email}`;
     
     // console.log(newText);
