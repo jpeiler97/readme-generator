@@ -29,12 +29,12 @@ inquirer.prompt([
         message: 'Please type a description for your project.'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'installation',
         message: 'Please input the installation instructions for your project.'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
         message: 'Please input the usage information for your project.'
     },
@@ -45,12 +45,12 @@ inquirer.prompt([
         choices: ['MIT','ISC','GNU GPLv3','Apache 2.0']
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'contributing',
         message: 'Please input contribution guidelines for the project.'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'tests',
         message: 'Please input test instructions for the project.'
     },
@@ -67,12 +67,13 @@ inquirer.prompt([
     ])
 .then((data) => {
     const tableOfContents = 
-    `[Installation](#Installation)
-    [Usage](#Usage)
-    [License](#License)
-    [Contributing](#Contributing)
-    [Tests](#Tests)
-    [Questions](#Questions)`;
+    `
+[Installation](#Installation)
+[Usage](#Usage)
+[License](#License)
+[Contributing](#Contributing)
+[Tests](#Tests)
+[Questions](#Questions)`;
     
     const licenses = [
         {type: 'MIT',
@@ -94,35 +95,35 @@ inquirer.prompt([
 
     const newText = 
     `
-    #${data.title}
+#${data.title}
     
-    ${licenseChoice.badge}
+${licenseChoice.badge}
 
-    ##Description
-    ${data.description}
+##Description
+${data.description}
 
-    ##Table of Contents
-    ${tableOfContents}
+##Table of Contents
+${tableOfContents}
     
-    ##Installation
-    ${data.installation}
+##Installation
+${data.installation}
     
-    ##Usage
-    ${data.usage}
+##Usage
+${data.usage}
 
-    ##License
-    This application is covered under the ${licenseChoice.type} license.
+##License
+This application is covered under the ${licenseChoice.type} license.
 
-    ##Contributing
-    ${data.contributing}
+##Contributing
+${data.contributing}
     
-    ##Tests
-    ${data.tests}
+##Tests
+${data.tests}
 
-    ##Questions
-    For further questions, you may reach me at:
-    - GitHub: ${data.githubUsername}
-    - EMail: ${data.email}`;
+##Questions
+For further questions, you may reach me at:
+- GitHub: ${data.githubUsername}
+- EMail: ${data.email}`;
     
     console.log(newText);
     // fs.writeFile('log.txt', newText, (err) => 
