@@ -134,7 +134,7 @@ ${data.tests}
 ## Questions
 For further questions, you may reach me at:
 - GitHub: ${data.githubUsername}
-- EMail: ${data.email}`;
+- Email: ${data.email}`;
     
     // console.log(newText);
     fs.writeFile('log.txt', newText, (err) => 
