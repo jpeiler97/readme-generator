@@ -95,37 +95,37 @@ inquirer.prompt([
 
     const newText = 
     `
-#${data.title}
+# ${data.title}
     
 ${licenseChoice.badge}
 
-##Description
+## Description
 ${data.description}
 
-##Table of Contents
+## Table of Contents
 ${tableOfContents}
     
-##Installation
+## Installation
 ${data.installation}
     
-##Usage
+## Usage
 ${data.usage}
 
-##License
+## License
 This application is covered under the ${licenseChoice.type} license.
 
-##Contributing
+## Contributing
 ${data.contributing}
     
-##Tests
+## Tests
 ${data.tests}
 
-##Questions
+## Questions
 For further questions, you may reach me at:
 - GitHub: ${data.githubUsername}
 - EMail: ${data.email}`;
     
-    console.log(newText);
-    // fs.writeFile('log.txt', newText, (err) => 
-    // err ? console.log(err) : console.log('Success!'));
+    // console.log(newText);
+    fs.writeFile('log.txt', newText, (err) => 
+    err ? console.log(err) : console.log('Success!'));
 })
