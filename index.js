@@ -68,12 +68,17 @@ inquirer.prompt([
 .then((data) => {
     const tableOfContents = 
     `
-[Installation](#Installation)
-[Usage](#Usage)
-[License](#License)
-[Contributing](#Contributing)
-[Tests](#Tests)
-[Questions](#Questions)`;
+[Installation](#installation)
+
+[Usage](#usage)
+
+[License](#license)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)`;
     
     const licenses = [
         {type: 'MIT',
@@ -104,22 +109,28 @@ ${data.description}
 
 ## Table of Contents
 ${tableOfContents}
-    
+
+<a name="installation"></a>
 ## Installation
 ${data.installation}
-    
+
+<a name="usage"></a>
 ## Usage
 ${data.usage}
 
+<a name="license"></a>
 ## License
 This application is covered under the ${licenseChoice.type} license.
 
+<a name="contributing"></a>
 ## Contributing
 ${data.contributing}
-    
+
+<a name="tests"></a>
 ## Tests
 ${data.tests}
 
+<a name="questions"></a>
 ## Questions
 For further questions, you may reach me at:
 - GitHub: ${data.githubUsername}
