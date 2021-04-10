@@ -41,6 +41,16 @@ To use this application:
 - Copy the log file into your project's repo and rename it as 'README.md'
 - Copy the log text into your project's existing README. 
 
+Video of Functionality:
+
+[![Functionality](https://img.youtube.com/vi/C1tVoaumn74/0.jpg)](https://www.youtube.com/watch?v=C1tVoaumn74)
+
+Screenshots:
+
+![Git Bash](/images/screenshot1.png?raw=true "Git Bash")
+
+![Generated README](/images/screenshot2.png?raw=true "Generated README")
+
 <a name="license"></a>
 ## License
 This application is covered under the MIT license.
@@ -58,5 +68,5 @@ For testing purposes, simply input random text when prompted.
 <a name="questions"></a>
 ## Questions
 For further questions, you may reach me at:
-- GitHub: jpeiler97
+- GitHub: [jpeiler97](https://github.com/jpeiler97)
 - Email: jp.eiler97@gmail.com
